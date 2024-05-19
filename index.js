@@ -9,7 +9,7 @@ const { MongoClient, ServerApiVersion } = require("mongodb");
 const app = express();
 
 //middlewares
-app.use(express.static(__dirname));
+app.use(express.static('basic'));
 app.use(express.json());
 app.use(cors());
 
@@ -42,6 +42,14 @@ const db = client.db("AssessmentInsights");
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html');
 });
+
+app.get('/basic/style.css', (req, res) => {
+    res.sendFile(__dirname + '/basic/style.css');
+})
+
+app.get('/basic/script.js', (req, res) => {
+  res.sendFile(__dirname + '/basic/script.js');
+})
 
 app.get('/logo',(req,res)=>{
     db.collection('images').findOne({name:"LOGO"}).then((data)=>{
