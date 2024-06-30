@@ -59,7 +59,7 @@ app.get('/logo',(req,res)=>{
 
 var usn = '1DS22IS001'    // default usn
 app.post('/usn', async(req, res) => {     // to get the usn from the user
-    const {parcel} = req.body;
+    const {parcel} = await req.body;
     usn = parcel;
 })
 
