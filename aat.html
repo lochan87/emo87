@@ -146,7 +146,7 @@
       })
 
       fetch('/aat4',{method:'GET'}).then(response => response.json()).then(data => {
-          document.getElementById('LD1').src = "data:image/png;base64," + data.ld_aat.toString('base64');
+        document.getElementById('LD1').src = "data:image/png;base64," + data.ld_aat.toString('base64');
       });
 
       fetch('/aat5',{method:'GET'}).then(response => response.json()).then(data => {

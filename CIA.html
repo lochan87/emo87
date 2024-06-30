@@ -213,19 +213,26 @@
         document.getElementById("dvm").innerHTML = data.DV;
         document.getElementById("sm").innerHTML = data.SCR;
       });
+
       fetch('/Graphs1',{method:'GET'}).then(response => response.json()).then(data=>{
         document.getElementById("matg").src = "data:image/png;base64," + data.matg.data.toString('base64');
         document.getElementById("dsg").src = "data:image/png;base64," + data.dsg.data.toString('base64');
-        document.getElementById("ldg").src = "data:image/png;base64," + data.ldg.data.toString('base64');
       });
+
       fetch('/Graphs2',{method:'GET'}).then(response => response.json()).then(data=>{
+        document.getElementById("ldg").src = "data:image/png;base64," + data.ldg.data.toString('base64');
         document.getElementById("osg").src = "data:image/png;base64," + data.osg.data.toString('base64');
+      });
+
+      fetch('/Graphs3',{method:'GET'}).then(response => response.json()).then(data=>{
         document.getElementById("etcg").src = "data:image/png;base64," + data.etcg.data.toString('base64');
         document.getElementById("scrg").src = "data:image/png;base64," + data.scrg.data.toString('base64');
       });
+
       fetch('/DSLab',{method:'GET'}).then(response => response.json()).then(data=>{
         document.getElementById('dslab').src = "data:image/png;base64," + data.dslab.data.toString('base64');
       });
+
       fetch('/DV',{method:'GET'}).then(response => response.json()).then(data=>{
         document.getElementById('dvlab').src = "data:image/png;base64," + data.dvlab.data.toString('base64');
       });

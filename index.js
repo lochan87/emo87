@@ -57,6 +57,12 @@ app.get('/logo',(req,res)=>{
     })
 })
 
+var usn = '1DS22IS001'    // default usn
+app.post('/usn', (req, res) => {     // to get the usn from the user
+  const {parcel} = req.body;
+  usn = parcel;
+})
+
 app.get('/fcar', (req, res) => {
     db.collection('images').findOne({name:"First_Carousel"}).then((data)=>{
       res.send(data)
@@ -113,6 +119,20 @@ app.get('/CIA-III',(req,res)=>{
   db.collection('CIA-III').findOne({USN:usn}).then((data)=>{
     res.send(data)
   })
+})
+
+app.get('/CIA.html',(req,res)=>{
+  res.sendFile(__dirname + '/CIA.html');
+})
+
+app.get('/Final',(req,res)=>{
+  db.collection('Final').findOne({USN:usn}).then((data)=>{
+    res.send(data)
+  })
+})
+
+app.get('/aim.html',(req,res)=>{
+  res.sendFile(__dirname + "/aim.html")
 })
 
 app.get('/eligible.html',(req,res)=>{
@@ -293,6 +313,12 @@ app.get('/Graphs1',(req,res)=>{
 
 app.get('/Graphs2',(req,res)=>{
   db.collection('Graphs2').findOne({USN:usn}).then((data)=>{
+    res.send(data)
+  })
+})
+
+app.get('/Graphs3',(req,res)=>{
+  db.collection('Graphs3').findOne({USN:usn}).then((data)=>{
     res.send(data)
   })
 })
