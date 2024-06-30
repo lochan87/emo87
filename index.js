@@ -139,6 +139,30 @@ app.get('/aat2', (req, res) => {
     })
 })
 
+app.get('/aat3', (req, res) => {
+    db.collection('images').findOne({name:"AAT3"}).then((data)=>{
+      res.send(data)
+    })
+})
+
+app.get('/aat4', (req, res) => {
+    db.collection('images').findOne({name:"AAT4"}).then((data)=>{
+      res.send(data)
+    })
+})
+
+app.get('/aat5', (req, res) => {
+    db.collection('images').findOne({name:"AAT5"}).then((data)=>{
+      res.send(data)
+    })
+})
+
+app.get('/aat6', (req, res) => {
+    db.collection('images').findOne({name:"AAT6"}).then((data)=>{
+      res.send(data)
+  })
+})
+
 app.get('/aat_math.html',(req,res)=>{
   res.sendFile(__dirname + '/aat_math.html');
 })
@@ -171,6 +195,30 @@ app.get('/quiz1', (req, res) => {
 
 app.get('/quiz2', (req, res) => {
     db.collection('images').findOne({name:"QUIZ2"}).then((data)=>{
+        res.send(data)
+    })
+})
+
+app.get('/quiz3', (req, res) => {
+    db.collection('images').findOne({name:"QUIZ3"}).then((data)=>{
+      res.send(data)
+    })
+})
+
+app.get('/quiz4', (req, res) => {
+    db.collection('images').findOne({name:"QUIZ4"}).then((data)=>{
+        res.send(data)
+    })
+})
+
+app.get('/quiz5', (req, res) => {
+    db.collection('images').findOne({name:"QUIZ5"}).then((data)=>{
+      res.send(data)
+    })
+})
+
+app.get('/quiz6', (req, res) => {
+    db.collection('images').findOne({name:"QUIZ6"}).then((data)=>{
         res.send(data)
     })
 })
@@ -261,6 +309,24 @@ app.get('/lab1', (req, res) => {
   
 app.get('/lab2', (req, res) => {
     db.collection('images').findOne({name:"LAB2"}).then((data)=>{
+        res.send(data)
+    })
+})
+
+app.get('/lab3', (req, res) => {
+    db.collection('images').findOne({name:"LAB3"}).then((data)=>{
+      res.send(data)
+    })
+})
+
+app.get('/lab4', (req, res) => {
+    db.collection('images').findOne({name:"LAB4"}).then((data)=>{
+        res.send(data)
+    })
+})
+
+app.get('/lab5', (req, res) => {
+    db.collection('images').findOne({name:"LAB5"}).then((data)=>{
         res.send(data)
     })
 })

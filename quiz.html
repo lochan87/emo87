@@ -136,15 +136,27 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script>
       fetch('/quiz1',{method:'GET'}).then(response => response.json()).then(data => {
-          document.getElementById('quiz').src = "data:image/png;base64," + data.quiz.toString('base64');
-          document.getElementById('Maths').src = "data:image/png;base64," + data.mat_quiz.toString('base64');
-          document.getElementById('DS').src = "data:image/png;base64," + data.ds_quiz.toString('base64');
+        document.getElementById('quiz').src = "data:image/png;base64," + data.quiz.toString('base64');
       });
 
       fetch('/quiz2',{method:'GET'}).then(response => response.json()).then(data => {
-          document.getElementById('LD').src = "data:image/png;base64," + data.ld_quiz.toString('base64');
-          document.getElementById('OS').src = "data:image/png;base64," + data.os_quiz.toString('base64');
-          document.getElementById('Elective').src = "data:image/png;base64," + data.etc_quiz.toString('base64');
+        document.getElementById('Maths').src = "data:image/png;base64," + data.mat_quiz.toString('base64');
+      });
+
+      fetch('/quiz3',{method:'GET'}).then(response => response.json()).then(data => {
+        document.getElementById('DS').src = "data:image/png;base64," + data.ds_quiz.toString('base64');
+      });
+
+      fetch('/quiz4',{method:'GET'}).then(response => response.json()).then(data => {
+        document.getElementById('LD').src = "data:image/png;base64," + data.ld_quiz.toString('base64');
+      });
+
+      fetch('/quiz5',{method:'GET'}).then(response => response.json()).then(data => {
+        document.getElementById('OS').src = "data:image/png;base64," + data.os_quiz.toString('base64');
+      });
+
+      fetch('/quiz6',{method:'GET'}).then(response => response.json()).then(data => {
+        document.getElementById('Elective').src = "data:image/png;base64," + data.etc_quiz.toString('base64');
       });
     </script>
   </body>

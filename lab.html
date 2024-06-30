@@ -125,12 +125,21 @@
     <script>
       fetch('/lab1',{method:'GET'}).then(response => response.json()).then(data => {
           document.getElementById('lab').src = "data:image/png;base64," + data.lab.toString('base64');
-          document.getElementById('dslab').src = "data:image/png;base64," + data.ds_lab.toString('base64');
-          document.getElementById('ldlab').src = "data:image/png;base64," + data.ld_lab.toString('base64');
       });
 
       fetch('/lab2',{method:'GET'}).then(response => response.json()).then(data => {
+          document.getElementById('dslab').src = "data:image/png;base64," + data.ds_lab.toString('base64');
+      });
+
+      fetch('/lab3',{method:'GET'}).then(response => response.json()).then(data => {
+          document.getElementById('ldlab').src = "data:image/png;base64," + data.ld_lab.toString('base64');
+      });
+
+      fetch('/lab4',{method:'GET'}).then(response => response.json()).then(data => {
           document.getElementById('oslab').src = "data:image/png;base64," + data.os_lab.toString('base64');
+      });
+
+      fetch('/lab5',{method:'GET'}).then(response => response.json()).then(data => {
           document.getElementById('dvlab').src = "data:image/png;base64," + data.dv_lab.toString('base64');
       });
     </script>

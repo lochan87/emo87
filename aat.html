@@ -135,15 +135,27 @@
     <script>
       fetch('/aat1',{method:'GET'}).then(response => response.json()).then(data => {
         document.getElementById('aat').src = "data:image/png;base64," + data.aat.toString('base64');
-        document.getElementById('Maths1').src = "data:image/png;base64," + data.mat_aat.toString('base64');
-        document.getElementById('DS1').src = "data:image/png;base64," + data.ds_aat.toString('base64');
       });
 
       fetch('/aat2',{method:'GET'}).then(response => response.json()).then(data => {
+        document.getElementById('Maths1').src = "data:image/png;base64," + data.mat_aat.toString('base64');
+      })
+
+      fetch('/aat3',{method:'GET'}).then(response => response.json()).then(data => {
+        document.getElementById('DS1').src = "data:image/png;base64," + data.ds_aat.toString('base64');
+      })
+
+      fetch('/aat4',{method:'GET'}).then(response => response.json()).then(data => {
           document.getElementById('LD1').src = "data:image/png;base64," + data.ld_aat.toString('base64');
-          document.getElementById('OS1').src = "data:image/png;base64," + data.os_aat.toString('base64');
-          document.getElementById('Elective1').src = "data:image/png;base64," + data.etc_aat.toString('base64');
       });
+
+      fetch('/aat5',{method:'GET'}).then(response => response.json()).then(data => {
+        document.getElementById('OS1').src = "data:image/png;base64," + data.os_aat.toString('base64');
+      })
+
+      fetch('/aat6',{method:'GET'}).then(response => response.json()).then(data => {
+        document.getElementById('Elective1').src = "data:image/png;base64," + data.etc_aat.toString('base64');
+      })
     </script>
   </body>
 </html>
