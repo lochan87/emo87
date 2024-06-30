@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Eligibility</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-info-subtle">
+      <div class="container-fluid">
+        <a class="navbar-brand" herf="/" style="cursor: pointer;"><img id="logo" src="..." alt="Assessment Insights" width="40" height="38" onclick="load()"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <!-- Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">CIA</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="CIA-I.html">CIA-I</a></li>
+                <li><a class="dropdown-item" href="CIA-II.html">CIA-II</a></li>
+                <li><a class="dropdown-item" href="CIA-III.html">CIA-III</a></li>
+                <li><a class="dropdown-item" href="CIA.html">Final CIA</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="aim.html">Aim in CIA-III</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">SEE</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item active" href="eligible.html" aria-current="page">Check Eligibility</a></li>
+                    <li><a class="dropdown-item" href="see.html">SEE Range</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="aat.html">AAT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="quiz.html">Quiz</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="lab.html">Lab</a>
+            </li>
+          </ul>
+          <form class="d-flex my-2 me-2" role="fetch">
+            <input id="usn" class="form-control me-2" placeholder="USN" aria-label="USN">
+            <button id="post" class="btn btn-outline-primary" onclick="postusn()">Get</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- Body -->
+    <h1 class="text-center" style="margin-top: 1.5%;"><u>SEE Eligibility</u></h1>
+    <!-- Table -->
+    <h3 class="text-center" style="margin-top: 1%;"><u>Theory Subjects</u></h3>
+    <div class="container" style="margin-top: 1.5%;">
+      <table class="table table-secondary text-center table-hover table-bordered">
+        <thead class="table-light">
+          <tr>
+            <th scope="col">SL.No</th>
+            <th scope="col">Subject</th>
+            <th scopw="col" colspan="3">Out of 50</th>
+            <th scope="col" colspan="3">Reduced to 10</th>
+            <th scope="col">Eligibility</th>
+          </tr>
+        </thead>
+        <tbody class="table-group-divider">
+          <tr>
+            <td></td>
+            <td></td>
+            <th scope="colgroup">CIA-I</th>
+            <th scope="colgroup">CIA-II</th>
+            <th scope="colgroup">CIA-III</th>
+            <th scope="colgroup">CIA-I</th>
+            <th scope="colgroup">CIA-II</th>
+            <th scope="colgroup">CIA-III</th>
+            <th scope="colgroup">Yes / No</th>
+          </tr>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mathematics</td>
+            <td id="Maths">...</td>
+            <td id="Maths2">...</td>
+            <td id="Maths3">...</td>
+            <td class="MathsE10" id="Maths10">...</td>
+            <td class="MathsE210" id="Maths210">...</td>
+            <td class="MathsE310" id="Maths310">...</td>
+            <td id="MathsE">...</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Data Structures</td>
+            <td id="DS">...</td>
+            <td id="DS2">...</td>
+            <td id="DS3">...</td>
+            <td class="DSE10" id="DS10">...</td>
+            <td class="DSE210" id="DS210">...</td>
+            <td class="DSE310" id="DS310">...</td>
+            <td id="DSE">...</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Logic Design</td>
+            <td id="LD">...</td>
+            <td id="LD2">...</td>
+            <td id="LD3">...</td>
+            <td class="LDE10" id="LD10">...</td>
+            <td class="LDE210" id="LD210">...</td>
+            <td class="LDE310" id="LD310">...</td>
+            <td id="LDE">...</td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td>Operating Systems</td>
+            <td id="OS">...</td>
+            <td id="OS2">...</td>
+            <td id="OS3">...</td>
+            <td class="OSE10" id="OS10">...</td>
+            <td class="OSE210" id="OS210">...</td>
+            <td class="OSE310" id="OS310">...</td>
+            <td id="OSE">...</td>
+          </tr>
+          <tr>
+            <th scope="row">5</th>
+            <td>Elective (PP/RD)</td>
+            <td id="ETC">...</td>
+            <td id="ETC2">...</td>
+            <td id="ETC3">...</td>
+            <td class="ETCE10" id="ETC10">...</td>
+            <td class="ETCE210" id="ETC210">...</td>
+            <td class="ETCE310" id="ETC310">...</td>
+            <td id="ETCE">...</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <h3 class="text-center" style="margin-top: 1.5%;"><u>Laboratory</u></h3>
+    <div class="container" style="margin-top: 1.5%;">
+      <table class="table table-secondary text-center table-hover table-bordered">
+        <thead class="table-light">
+          <tr>
+            <th scope="col">SL.No</th>
+            <th scope="col">Subject</th>
+            <th scopw="col">CIE</th>
+            <th scopw="col">CIA</th>
+            <th scopw="col">Total</th>
+            <th scope="col">Eligibility</th>
+          </tr>
+        </thead>
+        <tbody class="table-group-divider">
+          <tr>
+            <td scope="row">1</td>
+            <td>Data Structures Laboratory using C/C++</td>
+            <td class="DSLabE1" id="DSCIE">...</td>
+            <td class="DSLabE2" id="DSCIA">...</td>
+            <td id="DSTotal">...</td>
+            <td id="DSLabE">...</td>
+          </tr>
+          <tr>
+            <td scope="row">2</td>
+            <td>Data Visualization</td>
+            <td class="DVE1" id="DVCIE">...</td>
+            <td class="DVE2" id="DVCIA">...</td>
+            <td id="DVTotal">...</td>
+            <td id="DVE">...</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- Footer -->
+    <footer class="site-footer bg-body-tertiary text-center text-lg-start py-3">
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05); text-align: right;">
+          © Assessment Insights ·
+          <a class="btn btn-outline-primary" href="#">Back to top</a>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+      fetch('/CIA-I',{method:'GET'}).then(response => response.json()).then(data=>{
+          document.getElementById("Maths").innerHTML = data.Maths;
+          document.getElementById("Maths10").innerHTML = data.Maths10;
+          document.getElementById("DS").innerHTML = data.DS;
+          document.getElementById("DS10").innerHTML = data.DS10;
+          document.getElementById("LD").innerHTML = data.LD;
+          document.getElementById("LD10").innerHTML = data.LD10;
+          document.getElementById("OS").innerHTML = data.OS;
+          document.getElementById("OS10").innerHTML = data.OS10;
+          var sub = data.Sub;
+          if (sub == "PP") {
+          document.getElementById("ETC").innerHTML = data.PP;
+          document.getElementById("ETC10").innerHTML = data.PP10;
+          } else {
+          document.getElementById("ETC").innerHTML = data.RD;
+          document.getElementById("ETC10").innerHTML = data.RD10;
+          }
+      })
+      fetch('/CIA-II',{method:'GET'}).then(response => response.json()).then(data=>{
+          document.getElementById("Maths2").innerHTML = data.Maths;
+          document.getElementById("Maths210").innerHTML = data.Maths10;
+          document.getElementById("DS2").innerHTML = data.DS;
+          document.getElementById("DS210").innerHTML = data.DS10;
+          document.getElementById("LD2").innerHTML = data.LD;
+          document.getElementById("LD210").innerHTML = data.LD10;
+          document.getElementById("OS2").innerHTML = data.OS;
+          document.getElementById("OS210").innerHTML = data.OS10;
+          var sub = data.Sub;
+          if (sub == "PP") {
+          document.getElementById("ETC2").innerHTML = data.PP;
+          document.getElementById("ETC210").innerHTML = data.PP10;
+          } else {
+          document.getElementById("ETC2").innerHTML = data.RD;
+          document.getElementById("ETC210").innerHTML = data.RD10;
+          }
+      })
+      fetch('/CIA-III',{method:'GET'}).then(response => response.json()).then(data=>{
+          document.getElementById("Maths3").innerHTML = data.Maths;
+          document.getElementById("Maths310").innerHTML = data.Maths10;
+          document.getElementById("DS3").innerHTML = data.DS;
+          document.getElementById("DS310").innerHTML = data.DS10;
+          document.getElementById("LD3").innerHTML = data.LD;
+          document.getElementById("LD310").innerHTML = data.LD10;
+          document.getElementById("OS3").innerHTML = data.OS;
+          document.getElementById("OS310").innerHTML = data.OS10;
+          var sub = data.Sub;
+          if (sub == "PP") {
+          document.getElementById("ETC3").innerHTML = data.PP;
+          document.getElementById("ETC310").innerHTML = data.PP10;
+          } else {
+          document.getElementById("ETC3").innerHTML = data.RD;
+          document.getElementById("ETC310").innerHTML = data.RD10;
+          }
+          eligiblie();
+      })
+      function eligiblie()
+      {
+          var sub=['Maths','DS','LD','OS','ETC'] // For Eligiblity
+          for(var i=0;i<5;i++)
+          {
+              var a = parseFloat(document.getElementsByClassName(sub[i]+'E10').item(0).innerHTML)
+              var b = parseFloat(document.getElementsByClassName(sub[i]+'E210').item(0).innerHTML)
+              var c = parseFloat(document.getElementsByClassName(sub[i]+'E310').item(0).innerHTML)
+              var eli = document.getElementById(sub[i]+'E')
+              if(a+b+c>=12){
+                  eli.innerHTML = 'YES'
+              }
+              else{
+                  eli.innerHTML = 'NO'
+              }
+          }
+      }
+      fetch('/DSLab',{method:'GET'}).then(response => response.json()).then(data=>{
+        document.getElementById("DSCIE").innerHTML = data.LabTotal;
+        document.getElementById('DSCIA').innerHTML = data.CIA20;
+        document.getElementById('DSTotal').innerHTML = data.FINAL;
+      })
+      fetch('/DV',{method:'GET'}).then(response => response.json()).then(data=>{
+        document.getElementById("DVCIE").innerHTML = data.LabTotal;
+        document.getElementById('DVCIA').innerHTML = data.CIA20;
+        document.getElementById('DVTotal').innerHTML = data.FINAL;
+        checkE();
+      })
+      function checkE(){
+        var subs=['DSLab','DV']
+          for(var i=0;i<2;i++)
+          {
+              var a = parseFloat(document.getElementsByClassName(subs[i]+'E1').item(0).innerHTML)
+              var b = parseFloat(document.getElementsByClassName(subs[i]+'E2').item(0).innerHTML)
+              var eli = document.getElementById(subs[i]+'E')
+              if(a>=12 && b>=8){
+                  eli.innerHTML = 'YES'
+              }
+              else{
+                  eli.innerHTML = 'NO'
+              }
+          }
+      }
+    </script>
+  </body>
+</html>

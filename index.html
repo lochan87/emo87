@@ -139,10 +139,13 @@
 
       fetch('/fcia1',{method:'GET'}).then(response => response.json()).then(data => {
         document.getElementById('cia1').src = "data:image/png;base64," + data.cia1.toString('base64');
-        document.getElementById('cia2').src = "data:image/png;base64," + data.cia2.toString('base64');
       });
 
       fetch('/fcia2',{method:'GET'}).then(response => response.json()).then(data => {
+        document.getElementById('cia2').src = "data:image/png;base64," + data.cia2.toString('base64');
+      });
+
+      fetch('/fcia3',{method:'GET'}).then(response => response.json()).then(data => {
         document.getElementById('cia3').src = "data:image/png;base64," + data.cia3.toString('base64');
       });
     </script>

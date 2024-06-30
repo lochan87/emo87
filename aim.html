@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Aim</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar bg-body-tertiary navbar-expand-lg bg-info-subtle">
+      <div class="container-fluid">
+        <a class="navbar-brand" style="cursor: pointer;"><img id="logo" src="..." alt="Assessment Insights" width="40" height="38" onclick="load()"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <!-- Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">CIA</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="CIA-I.html">CIA-I</a></li>
+                <li><a class="dropdown-item" href="CIA-II.html">CIA-II</a></li>
+                <li><a class="dropdown-item" href="CIA-III.html">CIA-III</a></li>
+                <li><a class="dropdown-item" href="CIA.html">Final CIA</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item active" href="aim.html" aria-current="page">Aim in CIA-III</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">SEE</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="eligible.html">Check Eligibility</a></li>
+                    <li><a class="dropdown-item" href="see.html">SEE Range</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="aat.html">AAT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="quiz.html">Quiz</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="lab.html">Lab</a>
+            </li>
+          </ul>
+          <form class="d-flex my-2 me-2" role="fetch">
+            <input id="usn" class="form-control me-2" placeholder="USN" aria-label="USN">
+            <button id="post" class="btn btn-outline-primary" onclick="postusn()">Get</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- Body -->
+    <h1 class="text-center" style="margin-top: 1.5%;"><u>Minimal Marks Required</u></h1>
+    <!-- Table -->
+    <div class="container" style="margin-top: 2%;">
+      <table class="table table-secondary text-center table-hover table-bordered">
+        <thead class="table-light">
+        <tr>
+            <th scope="col">SL.No</th>
+            <th scope="col">Subject</th>
+            <th scopw="col" colspan="2">Out of 50</th>
+            <th scope="col" colspan="2">Reduced to 10</th>
+            <th scope="col">AIM in CIA-III</th>
+            <th scope="col">Present total(Out of 12)</th>
+        </tr>
+        </thead>
+        <tbody class="table-group-divider">
+        <tr>
+            <td></td>
+            <td></td>
+            <th scope="colgroup">CIA-I</th>
+            <th scope="colgroup">CIA-II</th>
+            <th scope="colgroup">CIA-I</th>
+            <th scope="colgroup">CIA-II</th>
+            <th scope="colgroup">Marks</th>
+            <td></td>
+        </tr>
+        <tr>
+            <th scope="row">1</th>
+            <td>Mathematics</td>
+            <td id="Maths">...</td>
+            <td id="Maths2">...</td>
+            <td class="m10" id="Maths10">...</td>
+            <td class="m210" id="Maths210">...</td>
+            <td id="maim">...</td>
+            <td id="mt10">...</td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>Data Structures</td>
+            <td id="DS">...</td>
+            <td id="DS2">...</td>
+            <td class="d10" id="DS10">...</td>
+            <td class="d210" id="DS210">...</td>
+            <td id="daim">...</td>
+            <td id="dt10">...</td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td>Logic Design</td>
+            <td id="LD">...</td>
+            <td id="LD2">...</td>
+            <td class="l10" id="LD10">...</td>
+            <td class="l210" id="LD210">...</td>
+            <td id="laim">...</td>
+            <td id="lt10">...</td>
+        </tr>
+        <tr>
+            <th scope="row">4</th>
+            <td>Operating Systems</td>
+            <td id="OS">...</td>
+            <td id="OS2">...</td>
+            <td class="o10" id="OS10">...</td>
+            <td class="o210" id="OS210">...</td>
+            <td id="oaim">...</td>
+            <td id="ot10">...</td>
+        </tr>
+        <tr>
+            <th scope="row">5</th>
+            <td>Elective (PP/RD)</td>
+            <td id="ETC">...</td>
+            <td id="ETC2">...</td>
+            <td class="e10" id="ETC10">...</td>
+            <td class="e210" id="ETC210">...</td>
+            <td id="eaim">...</td>
+            <td id="et10">...</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- Footer -->
+    <footer class="site-footer bg-body-tertiary text-center text-lg-start fixed-bottom py-3">
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05); text-align: right;">
+          © Assessment Insights ·
+          <a class="btn btn-outline-primary" href="#">Back to top</a>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+      fetch('/CIA-I',{method:'GET'}).then(response => response.json()).then(data=>{
+          document.getElementById("Maths").innerHTML = data.Maths;
+          document.getElementById("Maths10").innerHTML = data.Maths10;
+          document.getElementById("DS").innerHTML = data.DS;
+          document.getElementById("DS10").innerHTML = data.DS10;
+          document.getElementById("LD").innerHTML = data.LD;
+          document.getElementById("LD10").innerHTML = data.LD10;
+          document.getElementById("OS").innerHTML = data.OS;
+          document.getElementById("OS10").innerHTML = data.OS10;
+          var sub = data.Sub;
+          if (sub == "PP") {
+          document.getElementById("ETC").innerHTML = data.PP;
+          document.getElementById("ETC10").innerHTML = data.PP10;
+          } else {
+          document.getElementById("ETC").innerHTML = data.RD;
+          document.getElementById("ETC10").innerHTML = data.RD10;
+          }
+      })
+      fetch('/CIA-II',{method:'GET'}).then(response => response.json()).then(data=>{
+          document.getElementById("Maths2").innerHTML = data.Maths;
+          document.getElementById("Maths210").innerHTML = data.Maths10;
+          document.getElementById("DS2").innerHTML = data.DS;
+          document.getElementById("DS210").innerHTML = data.DS10;
+          document.getElementById("LD2").innerHTML = data.LD;
+          document.getElementById("LD210").innerHTML = data.LD10;
+          document.getElementById("OS2").innerHTML = data.OS;
+          document.getElementById("OS210").innerHTML = data.OS10;
+          var sub = data.Sub;
+          if (sub == "PP") {
+          document.getElementById("ETC2").innerHTML = data.PP;
+          document.getElementById("ETC210").innerHTML = data.PP10;
+          } else {
+          document.getElementById("ETC2").innerHTML = data.RD;
+          document.getElementById("ETC210").innerHTML = data.RD10;
+          }
+          aim();
+          document.getElementById("CIA2").src = "data:image/png;base64," + data.cia2.data.toString('base64');
+          document.getElementById("CIA21").src = "data:image/png;base64," + data.cia21.data.toString('base64');
+      })
+      function aim()                    //To calculate the aim
+      {
+          var mt10 = parseFloat(document.getElementsByClassName('m10').item(0).innerHTML) + parseFloat(document.getElementsByClassName('m210').item(0).innerHTML);
+          var ds10 = parseFloat(document.getElementsByClassName('d10').item(0).innerHTML) + parseFloat(document.getElementsByClassName('d210').item(0).innerHTML);
+          var ld10 = parseFloat(document.getElementsByClassName('l10').item(0).innerHTML) + parseFloat(document.getElementsByClassName('l210').item(0).innerHTML);
+          var os10 = parseFloat(document.getElementsByClassName('o10').item(0).innerHTML) + parseFloat(document.getElementsByClassName('o210').item(0).innerHTML);
+          var etc10 = parseFloat(document.getElementsByClassName('e10').item(0).innerHTML) + parseFloat(document.getElementsByClassName('e210').item(0).innerHTML);
+          const vars = [mt10,ds10,ld10,os10,etc10];
+          var sub = ['mt','ds','ld','os','etc'];
+          for(var i=0;i<5;i++)
+          {
+              document.getElementById(sub[i][0]+'t10').innerHTML = eval(vars[i].toFixed(1));
+              if(eval(vars[i])>=12)
+              {
+                  document.getElementById(sub[i][0]+'aim').innerHTML = 20;
+              }
+              else
+              {
+                  var a = ((12-eval(vars[i]))*5).toFixed(0);
+                  if(a<20)
+                  {
+                      a=20;
+                  }
+                  document.getElementById(sub[i][0]+'aim').innerHTML = a;
+              }
+          }
+      }
+    </script>
+  </body>
+</html>
